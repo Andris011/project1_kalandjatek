@@ -2,19 +2,19 @@
 
 class Program
 {
-    static void mozgas(List<List<int>> terkep)
+    static void Mozgas(List<List<int>> terkep)
     {
-        foreach (var sor in terkep)
-        {
-            Console.WriteLine(string.Join(" ", sor));
-        }
+        // foreach (var sor in terkep)
+        // {
+        //     Console.WriteLine(string.Join(" ", sor));
+        // }
 
         int x = 2;
         int y = 2;
 
         string bekeres = " ";
 
-        while (bekeres.ToLower() != "kilépes")
+        while (bekeres != "kilépés")
         {
             Console.WriteLine($"Y: {y}");
             Console.WriteLine($"X: {x}");
@@ -47,24 +47,28 @@ class Program
             
             Console.WriteLine("Merre?");
             bekeres = Console.ReadLine();
+            bekeres = bekeres.ToLower().Trim();
             
-
-
-            if ((bekeres.ToLower() == "észak" || bekeres.ToLower() == "é") && (terkep[y - 1][x] != FAL))
+            
+            if ((bekeres == "észak" || bekeres == "é") && (terkep[y - 1][x] != FAL))
             {
                 y--;
             } 
-            else if ((bekeres.ToLower() == "dél" || bekeres.ToLower() == "d") && (terkep[y + 1][x] != FAL))
+            else if ((bekeres == "dél" || bekeres == "d") && (terkep[y + 1][x] != FAL))
             {
                 y++;
             }
-            else if ((bekeres.ToLower() == "nyugat" || bekeres.ToLower() == "ny")  && (terkep[y][x - 1] != FAL))
+            else if ((bekeres == "nyugat" || bekeres == "ny")  && (terkep[y][x - 1] != FAL))
             {
                 x--;
             }
-            else if ((bekeres.ToLower() == "kelet" || bekeres.ToLower() == "k") && (terkep[y][x + 1] != FAL))
+            else if ((bekeres == "kelet" || bekeres == "k") && (terkep[y][x + 1] != FAL))
             {
                 x++;
+            }
+            else if (bekeres == "kilépés")
+            {
+                Console.WriteLine("Kilépés...");
             }
             else
             {
@@ -79,10 +83,8 @@ class Program
     
     static void Main(string[] args)
     {
-        /*
-         * 0: üres
-         * 1: fal
-         */
+        Console.WriteLine("Üdvözöllek a játékban!");
+
         var terkep = new List<List<int>>
         {
             //       0   1   2   3   4   5
@@ -93,9 +95,6 @@ class Program
             new() { FAL,FAL,FAL,FAL,FAL,FAL }  // 4
         };
 
-        mozgas(terkep);
-        var ertek = terkep[0][2];
-
-        Console.WriteLine(ertek);
+        Mozgas(terkep);
     }
 }

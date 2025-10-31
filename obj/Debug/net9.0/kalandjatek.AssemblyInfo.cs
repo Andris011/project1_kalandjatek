@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("kalandjatek")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5d7e14652ba9c87d3a3fc24bf4e69a8e4f051d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3d833cc0e814dcac57d6b6c9a8831894af51d9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("kalandjatek")]
 [assembly: System.Reflection.AssemblyTitleAttribute("kalandjatek")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
