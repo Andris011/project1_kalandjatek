@@ -21,22 +21,22 @@ class Program
 
             var iranyok = new List<string>();
 
-            if (terkep[y - 1][x] != 1)
+            if (terkep[y - 1][x] != FAL)
             {
                 iranyok.Add("észak");
             }
 
-            if (terkep[y + 1][x] != 1)
+            if (terkep[y + 1][x] != FAL)
             {
                 iranyok.Add(("dél"));
             }
 
-            if (terkep[y][x - 1] != 1)
+            if (terkep[y][x - 1] != FAL)
             {
                 iranyok.Add("nyugat");
             }
 
-            if (terkep[y][x + 1] != 1)
+            if (terkep[y][x + 1] != FAL)
             {
                 iranyok.Add(("kelet"));
             }
@@ -50,19 +50,19 @@ class Program
             
 
 
-            if ((bekeres.ToLower() == "észak" || bekeres.ToLower() == "é") && (terkep[y - 1][x] != 1))
+            if ((bekeres.ToLower() == "észak" || bekeres.ToLower() == "é") && (terkep[y - 1][x] != FAL))
             {
                 y--;
             } 
-            else if ((bekeres.ToLower() == "dél" || bekeres.ToLower() == "d") && (terkep[y + 1][x] != 1))
+            else if ((bekeres.ToLower() == "dél" || bekeres.ToLower() == "d") && (terkep[y + 1][x] != FAL))
             {
                 y++;
             }
-            else if ((bekeres.ToLower() == "nyugat" || bekeres.ToLower() == "ny")  && (terkep[y][x - 1] != 1))
+            else if ((bekeres.ToLower() == "nyugat" || bekeres.ToLower() == "ny")  && (terkep[y][x - 1] != FAL))
             {
                 x--;
             }
-            else if ((bekeres.ToLower() == "kelet" || bekeres.ToLower() == "k") && (terkep[y][x + 1] != 1))
+            else if ((bekeres.ToLower() == "kelet" || bekeres.ToLower() == "k") && (terkep[y][x + 1] != FAL))
             {
                 x++;
             }
@@ -73,6 +73,9 @@ class Program
         }
 
     }
+
+    public const int FAL = 1;
+    public const int UT = 0;
     
     static void Main(string[] args)
     {
@@ -82,12 +85,12 @@ class Program
          */
         var terkep = new List<List<int>>
         {
-            //      0 1 2 3 4 5
-            new() { 1,1,1,1,1,1 }, // 0
-            new() { 1,0,0,0,0,1 }, // 1
-            new() { 1,1,0,1,0,1 }, // 2
-            new() { 1,1,1,1,0,1 }, // 3
-            new() { 1,1,1,1,1,1 }  // 4
+            //       0   1   2   3   4   5
+            new() { FAL,FAL,FAL,FAL,FAL,FAL }, // 0
+            new() { FAL,UT, UT, UT, UT, FAL }, // 1
+            new() { FAL,FAL,UT,FAL,UT,FAL }, // 2
+            new() { FAL,FAL,FAL,FAL,UT,FAL }, // 3
+            new() { FAL,FAL,FAL,FAL,FAL,FAL }  // 4
         };
 
         mozgas(terkep);
