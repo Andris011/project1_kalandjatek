@@ -1,0 +1,15 @@
+C:\Users\Fébert András\RiderProjects\kalandjatek\bin\Debug\net9.0\kalandjatek.exe
+C:\Users\Fébert András\RiderProjects\kalandjatek\bin\Debug\net9.0\kalandjatek.deps.json
+C:\Users\Fébert András\RiderProjects\kalandjatek\bin\Debug\net9.0\kalandjatek.runtimeconfig.json
+C:\Users\Fébert András\RiderProjects\kalandjatek\bin\Debug\net9.0\kalandjatek.dll
+C:\Users\Fébert András\RiderProjects\kalandjatek\bin\Debug\net9.0\kalandjatek.pdb
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\kalandjatek.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\kalandjatek.AssemblyInfoInputs.cache
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\kalandjatek.AssemblyInfo.cs
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\kalandjatek.csproj.CoreCompileInputs.cache
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\kalandjatek.sourcelink.json
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\kalandjatek.dll
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\refint\kalandjatek.dll
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\kalandjatek.pdb
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\kalandjatek.genruntimeconfig.cache
+C:\Users\Fébert András\RiderProjects\kalandjatek\obj\Debug\net9.0\ref\kalandjatek.dll
