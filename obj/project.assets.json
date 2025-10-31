@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fébert András\\RiderProjects\\ConsoleApp1\\ConsoleApp1.csproj",
-      "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\Fébert András\\RiderProjects\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Fébert András\\RiderProjects\\kalandjatek\\kalandjatek.csproj",
+      "projectName": "kalandjatek",
+      "projectPath": "C:\\Users\\Fébert András\\RiderProjects\\kalandjatek\\kalandjatek.csproj",
       "packagesPath": "C:\\Users\\Fébert András\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fébert András\\RiderProjects\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\Fébert András\\RiderProjects\\kalandjatek\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Fébert András\\AppData\\Roaming\\NuGet\\NuGet.Config"
