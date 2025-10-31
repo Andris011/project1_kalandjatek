@@ -45,35 +45,64 @@ class Program
             
             Console.WriteLine(string.Join(", ", iranyok));
             
-            Console.WriteLine("Merre?");
-            bekeres = Console.ReadLine();
-            bekeres = bekeres.ToLower().Trim();
+            Console.Write("Merre? ");
+            bekeres = Console.ReadLine().ToLower().Trim();;
+
+            switch (bekeres)
+            {
+                case "észak" or "é" when (terkep[y - 1][x] != FAL):
+                    y--;
+                    break;
+                
+                case "dél" or "d" when (terkep[y + 1][x] != FAL):
+                    y++;
+                    break;
+                
+                case "nyugat" or "ny" when (terkep[y][x - 1] != FAL):
+                    x--;
+                    break;
+                
+                case "kelet" or "k" when  (terkep[y][x + 1] != FAL):
+                    x++;
+                    break;
+                
+                case "kilépés":
+                    Console.WriteLine("Viszlát!");
+                    break;
+                
+                default:
+                    Console.WriteLine("Hibás input!");
+                    break;
+                    
+            }
+
+            Console.WriteLine();
             
             
-            if ((bekeres == "észak" || bekeres == "é") && (terkep[y - 1][x] != FAL))
-            {
-                y--;
-            } 
-            else if ((bekeres == "dél" || bekeres == "d") && (terkep[y + 1][x] != FAL))
-            {
-                y++;
-            }
-            else if ((bekeres == "nyugat" || bekeres == "ny")  && (terkep[y][x - 1] != FAL))
-            {
-                x--;
-            }
-            else if ((bekeres == "kelet" || bekeres == "k") && (terkep[y][x + 1] != FAL))
-            {
-                x++;
-            }
-            else if (bekeres == "kilépés")
-            {
-                Console.WriteLine("Kilépés...");
-            }
-            else
-            {
-                Console.WriteLine("Hibás input!");
-            }
+            // if ((bekeres == "észak" || bekeres == "é") && (terkep[y - 1][x] != FAL))
+            // {
+            //     y--;
+            // } 
+            // else if ((bekeres == "dél" || bekeres == "d") && (terkep[y + 1][x] != FAL))
+            // {
+            //     y++;
+            // }
+            // else if ((bekeres == "nyugat" || bekeres == "ny")  && (terkep[y][x - 1] != FAL))
+            // {
+            //     x--;
+            // }
+            // else if ((bekeres == "kelet" || bekeres == "k") && (terkep[y][x + 1] != FAL))
+            // {
+            //     x++;
+            // }
+            // else if (bekeres == "kilépés")
+            // {
+            //     Console.WriteLine("Kilépés...");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Hibás input!");
+            // }
         }
 
     }
