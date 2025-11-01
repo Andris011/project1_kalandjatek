@@ -46,7 +46,7 @@ class Program
             Console.WriteLine(string.Join(", ", iranyok));
             
             Console.Write("Merre? ");
-            bekeres = Console.ReadLine().ToLower().Trim();;
+            bekeres = Console.ReadLine().ToLower().Trim();
 
             switch (bekeres)
             {
