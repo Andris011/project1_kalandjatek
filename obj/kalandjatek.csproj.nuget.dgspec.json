@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fébert András\\RiderProjects\\kalandjatek\\kalandjatek.csproj": {}
+    "C:\\Users\\ROG\\source\\repos\\project1_kalandjatek\\kalandjatek.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fébert András\\RiderProjects\\kalandjatek\\kalandjatek.csproj": {
+    "C:\\Users\\ROG\\source\\repos\\project1_kalandjatek\\kalandjatek.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fébert András\\RiderProjects\\kalandjatek\\kalandjatek.csproj",
+        "projectUniqueName": "C:\\Users\\ROG\\source\\repos\\project1_kalandjatek\\kalandjatek.csproj",
         "projectName": "kalandjatek",
-        "projectPath": "C:\\Users\\Fébert András\\RiderProjects\\kalandjatek\\kalandjatek.csproj",
-        "packagesPath": "C:\\Users\\Fébert András\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fébert András\\RiderProjects\\kalandjatek\\obj\\",
+        "projectPath": "C:\\Users\\ROG\\source\\repos\\project1_kalandjatek\\kalandjatek.csproj",
+        "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ROG\\source\\repos\\project1_kalandjatek\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Fébert András\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -59,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Fébert András\\.dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -116,12 +116,17 @@ class Program
 
         var terkep = new List<List<int>>
         {
-            //       0   1   2   3   4   5
-            new() { FAL,FAL,FAL,FAL,FAL,FAL }, // 0
-            new() { FAL,UT, UT, UT, UT, FAL }, // 1
-            new() { FAL,FAL,UT,FAL,UT,FAL }, // 2
-            new() { FAL,FAL,FAL,FAL,UT,FAL }, // 3
-            new() { FAL,FAL,FAL,FAL,FAL,FAL }  // 4
+            //       0   1   2   3   4   5  6   7   8   9
+            new() { FAL,FAL,FAL,FAL,UT,FAL,FAL,FAL,FAL,FAL},// 0
+            new() { FAL,FAL,UT,UT,UT,FAL,UT,UT,UT,FAL},     // 1
+            new() { UT,UT,UT,FAL,UT,FAL,UT,FAL,FAL,FAL},    // 2
+            new() { UT,FAL,UT,FAL,UT,FAL,UT,FAL,UT,UT},     // 3
+            new() { UT,FAL,UT,FAL,FAL,FAL,UT,FAL,FAL,UT},   // 4
+            new() { FAL,FAL,UT,FAL,UT,UT,UT,UT,FAL,UT},     // 5
+            new() { UT,UT,UT,UT,UT,FAL,FAL,UT,FAL,UT},      // 6
+            new() { UT,FAL,FAL,FAL,UT,FAL,FAL,UT,UT,UT},    // 7
+            new() { UT,FAL,UT,UT,UT,FAL,FAL,UT,FAL,UT},     // 8
+            new() { FAL,FAL,FAL,FAL,UT,FAL,FAL,FAL,FAL,UT}  // 9
         };
 
         Mozgas(terkep);
