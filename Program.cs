@@ -109,6 +109,9 @@ class Program
 
     public const int FAL = 1;
     public const int UT = 0;
+    public const int E = 2; //enemy
+    public const int F = 3; //fegyver
+    public const int B = 4; //boss
     
     static void Main(string[] args)
     {
@@ -116,17 +119,19 @@ class Program
 
         var terkep = new List<List<int>>
         {
-            //       0   1   2   3   4   5  6   7   8   9
-            new() { FAL,FAL,FAL,FAL,UT,FAL,FAL,FAL,FAL,FAL},// 0
-            new() { FAL,FAL,UT,UT,UT,FAL,UT,UT,UT,FAL},     // 1
-            new() { UT,UT,UT,FAL,UT,FAL,UT,FAL,FAL,FAL},    // 2
-            new() { UT,FAL,UT,FAL,UT,FAL,UT,FAL,UT,UT},     // 3
-            new() { UT,FAL,UT,FAL,FAL,FAL,UT,FAL,FAL,UT},   // 4
-            new() { FAL,FAL,UT,FAL,UT,UT,UT,UT,FAL,UT},     // 5
-            new() { UT,UT,UT,UT,UT,FAL,FAL,UT,FAL,UT},      // 6
-            new() { UT,FAL,FAL,FAL,UT,FAL,FAL,UT,UT,UT},    // 7
-            new() { UT,FAL,UT,UT,UT,FAL,FAL,UT,FAL,UT},     // 8
-            new() { FAL,FAL,FAL,FAL,UT,FAL,FAL,FAL,FAL,UT}  // 9
+            //       0   1   2   3   4   5  6   7   8   9   10  11
+            new() { FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL},   // 0
+            new() { FAL,FAL,FAL,FAL,FAL,B,FAL,FAL,FAL,FAL,FAL,FAL},     // 1
+            new() { FAL,FAL,FAL,UT,UT,UT,FAL,UT,UT,E,FAL,FAL},          // 2
+            new() { FAL,UT,UT,UT,FAL,UT,FAL,UT,FAL,FAL,FAL,FAL},        // 3
+            new() { FAL,UT,FAL,UT,FAL,E,FAL,UT,FAL,F,UT,FAL},           // 4
+            new() { FAL,E,FAL,UT,FAL,FAL,FAL,UT,FAL,FAL,UT,FAL},        // 5
+            new() { FAL,FAL,FAL,UT,FAL,UT,UT,UT,UT,FAL,UT,FAL},         // 6
+            new() { FAL,UT,UT,UT,UT,UT,FAL,FAL,UT,FAL,UT,FAL},          // 7
+            new() { FAL,UT,FAL,FAL,FAL,UT,FAL,FAL,UT,UT,UT,FAL},        // 8
+            new() { FAL,E,FAL,UT,UT,UT,FAL,FAL,E,FAL,UT,FAL},           // 9
+            new() { FAL,FAL,FAL,FAL,FAL,UT,FAL,FAL,FAL,FAL,E,FAL},      // 10
+            new() { FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL,FAL}    // 11
         };
 
         Mozgas(terkep);
