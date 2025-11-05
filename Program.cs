@@ -197,7 +197,8 @@ class Program
     
     static void Main(string[] args)
     {
-        Console.WriteLine("Üdvözöllek a játékban!");
+        Console.WriteLine("Üdvözöllek a játékban! \n" +
+                          "A kilépésher írja be, hogy ""kilépés");
 
         
         var terkep = new List<List<int>>
