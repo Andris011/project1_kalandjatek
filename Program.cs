@@ -9,16 +9,16 @@ class Program
         //     Console.WriteLine(string.Join(" ", sor));
         // }
 
-        int x = 2;
-        int y = 2;
+        int x = 5;
+        int y = 10;
+        
+        int fegyver = 0;
+        int hp = 60;
 
         string bekeres = " ";
 
         while (bekeres != "kilépés")
         {
-            Console.WriteLine($"Y: {y}");
-            Console.WriteLine($"X: {x}");
-
             var iranyok = new List<string>();
 
             if (terkep[y - 1][x] != FAL)
@@ -40,7 +40,8 @@ class Program
             {
                 iranyok.Add(("kelet"));
             }
-            
+
+            Console.WriteLine("\t \t \t \t \t \t hp: " + hp);
             Console.Write("A következő irányokba mehet: ");
             
             Console.WriteLine(string.Join(", ", iranyok));
@@ -50,20 +51,48 @@ class Program
 
             switch (bekeres)
             {
-                case "észak" or "é" when (terkep[y - 1][x] != FAL):
-                    y--;
+                case "észak" or "é" or "e":
+                    if (iranyok.Contains("észak"))
+                    {
+                        y--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Erre nem mehet, akadály van!");
+                    }
                     break;
                 
-                case "dél" or "d" when (terkep[y + 1][x] != FAL):
-                    y++;
+                case "dél" or "d":
+                    if (iranyok.Contains("dél"))
+                    {
+                        y++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Erre nem mehet, akadály van!");
+                    }
                     break;
                 
-                case "nyugat" or "ny" when (terkep[y][x - 1] != FAL):
-                    x--;
+                case "nyugat" or "ny" or "n":
+                    if (iranyok.Contains("nyugat"))
+                    {
+                        x--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Erre nem mehet, akadály van!");
+                    }
                     break;
                 
-                case "kelet" or "k" when  (terkep[y][x + 1] != FAL):
-                    x++;
+                case "kelet" or "k":
+                    if (iranyok.Contains("kelet"))
+                    {
+                        x++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Erre nem mehet, akadály van!");
+                    }
                     break;
                 
                 case "kilépés":
@@ -74,6 +103,59 @@ class Program
                     Console.WriteLine("Hibás input!");
                     break;
                     
+            }
+            
+            
+
+            if (terkep[y][x] == E)
+            {
+                hp -= 20;
+
+                if (hp == 0)
+                {
+                    Console.WriteLine("Találtál egy csapdát, meghaltál!");
+                    bekeres = "kilépés";
+                }
+                else
+                {
+                    Console.WriteLine("Talált egy csapdát és vesztett 20 hp-t!");
+                }
+            } 
+            else if (terkep[y][x] == F && fegyver == 0)
+            {
+                Console.WriteLine("Talált egy kardot!");
+                fegyver++;
+            }
+            else if (terkep[y][x] == B)
+            {
+                Console.WriteLine("Megtalálta a kijáratot, amit egy nagy alvó patkány őrzött! Megpróbálja legyőzni?");
+                Console.Write("[I]gen [N]em ");
+                string valasz = Console.ReadLine().Trim().ToLower();
+                
+                switch (valasz)
+                {
+                    case "i":
+                        if (fegyver == 1)
+                        {
+                            Console.WriteLine("Sikeresen legyőzte a szörnyet és kijutott a labirintusból! Gratulálok!");
+                            bekeres = "kilépés";
+                        }
+                        else
+                        {
+                            Console.WriteLine("Fegyver hiányában nem sikerült legyőznie a szörnyet, meghalt. Próbálja újra!");
+                            bekeres = "kilépés";
+                        }
+                        break;
+                    
+                    case "n":
+                        Console.WriteLine("A szörny nem ébredt fel, de az ajtó felé sem tud tovább menni.");
+                        break;
+                    
+                    default:
+                        Console.WriteLine("Hibás input!");
+                        break;
+            }
+                
             }
 
             Console.WriteLine();
@@ -117,6 +199,7 @@ class Program
     {
         Console.WriteLine("Üdvözöllek a játékban!");
 
+        
         var terkep = new List<List<int>>
         {
             //       0   1   2   3   4   5  6   7   8   9   10  11
